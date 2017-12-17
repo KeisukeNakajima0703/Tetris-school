@@ -1,5 +1,3 @@
-package tetris;
-
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -102,5 +100,4 @@ public class Block {
 			for(int j = 0; j < SIZE; j++)
 			_block[i][j] = new Cell();
 	}
-
 }

@@ -1,5 +1,3 @@
-package tetris;
-
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -14,7 +12,7 @@ public class Board {
 		initBoard();
 	}
 
-	public void update(int y){}
+	public void update(){}
 
 	public void checkBoard(int y){
 		for(int i = 0; i < Block.HEIGHT ; i++){
@@ -29,7 +27,7 @@ public class Board {
 			if(delete) deleteLine(y + i);
 		}
 	}
-
+	//
 	private void deleteLine(int y){
 		for(int i = 0; i < y - 1; i++){
 			for(int j = 1; j < Board.WIDTH - 1; j++){
@@ -37,7 +35,7 @@ public class Board {
 			}
 		}
 	}
-
+	//対象ブロックと座標を受け取り、盤上にブロックを固定する
 	public void setBlock(Block block, int x, int y){
 		for(int i = 0; i < Block.HEIGHT; i++)
 			for(int j = 0; j < Block.WIDTH; j++)
@@ -72,7 +70,7 @@ public class Board {
 	}
 
 	private boolean indexIsOk(int x, int y){
-		 return (x >= 0 && x < WIDTH) && (y >= 0 && y < HEIGHT);
+		 return (x >= 0 && x < WIDTH ) && (y >= 0 && y < HEIGHT );
 	}
 
 	public void draw(Graphics g){
@@ -80,5 +78,4 @@ public class Board {
 			for(int j = 0; j < Board.WIDTH; j++)
 				_board[i][j].draw(g, Tetris.BOARD_X + Tetris.CELL_SIZE * j, Tetris.BOARD_Y + Tetris.CELL_SIZE * i);
 	}
-
 }

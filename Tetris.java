@@ -1,5 +1,3 @@
-package tetris;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -11,9 +9,11 @@ public class Tetris extends JPanel implements Runnable{
 
 	public static final int WIDTH = 1000;
 	public static final int HEIGHT = 1000;
-	public static final int CELL_SIZE = 30;
+	public static final int CELL_SIZE = 20;
 	public static final int BOARD_X = 100;
 	public static final int BOARD_Y = 100;
+	public static final int HOLD_X = Board.WIDTH + 2;
+	public static final int HOLD_Y = 0;
 	public static final Color backColor = Color.BLACK;
 	public static final int DOWN_INTERVAL = 10;
 	private Mediater game;
@@ -43,7 +43,7 @@ public class Tetris extends JPanel implements Runnable{
 		int counter = 0;
 		while(true){
 			counter++;
-			game.update(counter % Tetris.DOWN_INTERVAL == 0);
+			game.update(counter%DOWN_INTERVAL == 0);
 			repaint();
 			try{
 				Thread.sleep(20);

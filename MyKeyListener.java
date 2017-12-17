@@ -1,5 +1,3 @@
-package tetris;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -26,6 +24,8 @@ public class MyKeyListener implements KeyListener {
 			_mediater.move(Mediater.RIGHT);
 		}else if(e.getKeyCode() == KeyEvent.VK_SPACE){
 			_mediater.move(Mediater.ROTATE);
+		}else if(e.getKeyCode() == KeyEvent.VK_B){
+			_mediater.holdBlock();
 		}
 	}
 
