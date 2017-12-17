@@ -26,6 +26,8 @@ public class Cell {
 	public void draw(Graphics g, int x, int y) {
 		g.setColor(_color);
 		g.fillRect(x, y, Tetris.CELL_SIZE, Tetris.CELL_SIZE);
+		g.setColor(Color.DARK_GRAY);
+		g.drawRect(x, y, Tetris.CELL_SIZE, Tetris.CELL_SIZE);
 	}
 
 }
