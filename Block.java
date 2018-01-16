@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
+//ゴミ
 public class Block {
 
 	public static final int WIDTH = 4;
@@ -90,6 +91,7 @@ public class Block {
 				copy._block[i][j] = _block[Block.WIDTH - 1 - j][i];
 		return copy;
 	}
+
 	public void rotation(){
 		_block = getRotationBlock()._block;
 	}

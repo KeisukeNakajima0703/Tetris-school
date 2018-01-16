@@ -1,8 +1,7 @@
-package tetris;
-
 import java.awt.Color;
 import java.awt.Graphics;
 
+//まとも
 public class Cell {
 
 	private Color _color;
@@ -29,5 +28,4 @@ public class Cell {
 		g.setColor(Color.DARK_GRAY);
 		g.drawRect(x, y, Tetris.CELL_SIZE, Tetris.CELL_SIZE);
 	}
-
 }
